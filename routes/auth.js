@@ -1,6 +1,7 @@
 const express = require("express");
 var passport = require("passport");
 var GoogleStrategy = require("passport-google-oidc");
+
 var db = require("../db");
 const router = express.Router();
 require("dotenv").config();
@@ -83,6 +84,10 @@ passport.deserializeUser(function (user, cb) {
 router.get("/login", function (req, res, next) {
   res.render("login");
 });
+router.get("/signup", function (req, res, next) {
+  res.render("signup");
+});
+
 router.get("/login/federated/google", passport.authenticate("google"));
 
 router.get(
@@ -92,6 +97,8 @@ router.get(
     failureRedirect: "/login",
   })
 );
+
+router.get("/login/federated/facebook", passport.authenticate("facebook"));
 
 router.post("/logout", function (req, res, next) {
   req.logout(function (err) {
