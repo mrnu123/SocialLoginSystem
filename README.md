@@ -1,4 +1,22 @@
-# todos-express-starter
+# SocialLoginSystem
+This project is part of DevInit2
+
+## Start Project
+```bash
+  git clone https://github.com/mrnu123/SocialLoginSystem.git
+```
+```bash
+  cd SocialLoginSystem
+```
+
+```bash
+  npm install
+```
+```bash
+  npm run start
+```
+
+## Reference : todos-express-starter
 
 This is a starter kit for building a todo app with sign in functionality using
 [Express](https://expressjs.com/), [Passport](https://www.passportjs.org/) and
@@ -35,6 +53,7 @@ using this kit as a starting point.
 * [todos-express-openidconnect](https://github.com/passport/todos-express-openidconnect)
 
   Illustrates how to implement sign in by integrating with an identity provider (IdP) via OpenID Connect.
+
 
 ## License
 
